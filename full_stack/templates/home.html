@@ -1,0 +1,252 @@
+{% extends 'base.html' %}
+
+{% block title %}Home Page{% endblock title %}
+
+{% block content %}
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+    .neon2 {
+        position: relative;
+        background: url("https://displaysolutions.samsung.com/static/images/event/cinema/img_sound_base.jpg");
+        color: transparent;
+    }
+    
+    .neon2::before,
+    .neon2::after {
+        content: attr(data-text);
+        color: white;
+        filter: blur(0.02em);
+        position: absolute;
+        top: 0;
+        left: 0;
+        pointer-events: none;
+    }
+    
+    .neon2::after {
+        mix-blend-mode: difference;
+    }
+    
+    .gradient,
+    .spotlight {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        pointer-events: none;
+        z-index: 10;
+    }
+    
+    .gradient {
+        background: linear-gradient(45deg, red, blue);
+        mix-blend-mode: multiply;
+    }
+    
+    .spotlight {
+        animation: light 5s infinite linear;
+        background: radial-gradient(circle, white, transparent 25%) 0 0 / 25% 25%, radial-gradient(circle, white, black 25%) 50% 50% / 12.5% 12.5%;
+        top: -100%;
+        left: -100%;
+        mix-blend-mode: color-dodge;
+    }
+    
+    @keyframes light {
+        100% {
+            transform: translate3d(50%, 50%, 0);
+        }
+    }
+    
+    .neon2 {
+        font: 700 40px 'Lato', sans-serif;
+        text-transform: uppercase;
+        text-align: center;
+        margin: 0;
+    }
+    
+    .neon2:focus {
+        outline: none;
+        border: 1px dotted white;
+    }
+    
+    .text-effect {
+        overflow: hidden;
+        position: relative;
+        filter: contrast(110%) brightness(190%);
+    }
+    
+    .p1 {
+        font-family: "Matura MT Script Capitals";
+        font-size: "24px";
+        font: var(--neon-border-color)
+    }
+    
+    .p2 {
+        font-family: "Monaco";
+        font-size: 16px;
+    }
+    
+    body {
+        font-family: 'Lobster', cursive;
+        background: url("https://displaysolutions.samsung.com/static/images/event/cinema/img_sound_base.jpg");
+        background-position: center;
+        color: #f0eaea;
+    }
+    
+    .card {
+        margin-bottom:300px;
+        box-shadow: 0 4px 8px hsl(0, 17%, 94%);
+        background: #333333;
+        color: #eaf1f0;
+        transition: 0.3s;
+        width: auto;
+        height: auto;
+        text-align:center;
+    }
+    
+    .card:hover {
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+        background: 0 0 15px #4d4b4c;
+        color: #f5ecec;
+    }
+    
+    .img-fluid {
+        max-height: 300px;
+        background: 0 0 15px #4d4b4c;
+        color: #ffffff;
+    }
+    
+    .display-card {
+        min-height: 30px;
+        background: 0 0 15px #4d4b4c;
+        color: #868383;
+    }
+    
+    @import url(https://fonts.googleapis.com/css?family=Exo+2:200i);
+    :root {
+        /* Base font size */
+        font-size: 10px;
+        /* Set neon color */
+        --neon-text-color: #f40;
+        --neon-border-color: #08f;
+    }
+    
+    h1 {
+        font-size: 5rem;
+        font-weight: 20;
+        font-family: Matura MT Script Capitals;
+        text-align: center;
+        color: #fff;
+        padding: 4rem 6rem 5.5rem;
+        border: 1rem solid #fff;
+        border-radius: 100rem;
+        animation: flicker 3s infinite alternate;
+    }
+    
+    a:link {
+        color: black;
+      }
+      
+      a:visited {
+        color: a1b1ff;
+      }
+      
+      a:hover {
+        color: fffdd0;
+      }
+
+      a:active {
+        color: black;
+      } 
+
+    h1::-moz-selection {
+        background-color: var(--neon-border-color);
+        color: var(--neon-text-color);
+    }
+    
+    h1::selection {
+        background-color: var(--neon-border-color);
+        color: var(--neon-text-color);
+    }
+    
+    h1:focus {
+        outline: none;
+    }
+    
+    @keyframes flicker {
+        0%,
+        30%,
+        70%,
+        100% {
+            text-shadow: -1.2rem -1.2rem 1rem #fff, 1.2rem 0.2rem 1rem #fff, 0 0 2rem var(--neon-text-color), 0 0 4rem var(--neon-text-color), 0 0 6rem var(--neon-text-color), 0 0 8rem var(--neon-text-color), 0 0 10rem var(--neon-text-color);
+            box-shadow: 0 0 0.5rem #fff, inset 0 0 0.5rem #fff, 0 0 2rem var(--neon-border-color), inset 0 0 2rem var(--neon-border-color), 0 0 4rem var(--neon-border-color), inset 0 0 4rem var(--neon-border-color);
+        }
+        20%,
+        24%,
+        55% {
+            text-shadow: none;
+            box-shadow: none;
+        }
+    }
+</style>
+</head>
+<body>
+    <br><br><br>
+    <div class="container-fluid"></div>
+        <div class="col-12 col-12 card-center"></div>
+            <div class="row mt-0"></div>
+                <div class="p1 text-center box-shadow"></div>
+                    <h1 contenteditable spellcheck="false">AccIO</h1>
+
+{% if user.is_authenticated %}
+<p>You are welcome on Home Page</p>
+<p>Your name is - {{user.first_name}} {{user.last_name}}</p>
+<p>Your email is - {{user.email}}</p>
+<br>
+<a href="{% url 'profile' user.id %}"><div class=" col-12 card-center text-center">
+    <div class="p1 text-align:left card display-card">
+      <div class="card-body text-center">
+        <p class="mt-2">Edit Profile</p>
+<br><br>
+<a href="{% url 'change_password' %}"><div class=" col-12 card-center text-center">
+    <div class="p1 text-align:left card display-card">
+      <div class="card-body text-center">
+        <p class="mt-2">Change Passworde</p>
+        
+<br><br>
+<a href="{% url 'logout' %}"><div class=" col-12 card-center text-center">
+    <div class="p1 text-align:left card display-card">
+      <div class="card-body text-center">
+        <p class="mt-2">Logoute</p>
+{% else %}
+
+<br><br><br><br><br><br>
+<br><br><br><br><br><br>
+<br><br><br><br><br><br>
+<br><br><br><br><br><br>
+<br><br><br><br><br><br>
+<br><br><br><br><br><br>
+
+<a href="{% url 'login' %}">
+    <div class="col-26 text-center card display-card">
+        <br><h2 class="mt-2">Enter the Theater</h2><br>
+<a href="{% url 'signup' %}">
+    <div class="col-26 card text-center ">
+        <br><h2 class="mt-2 ">Register Ticket</h2><br>
+        </a>
+<a href="{% url 'password_reset' %}">
+    <div class="col-26 text-center card display-card">
+        <br><h2 class="mt-2">Forgot details</h2><br>
+      </a>
+<script type="text/javascript">
+}
+</body>
+</html>
+{% endif %}
+{% endblock content %}
