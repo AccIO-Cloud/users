@@ -1,0 +1,53 @@
+{% load static%}
+{% block content %}
+<!DOCTYPE html>
+<html>
+<head>
+  <link href='https://fonts.googleapis.com/css?family=Yellowtail:400' rel='stylesheet' type='text/css'>
+  <link rel='stylesheet' href="{% static 'css/buttons.css' %}">
+  <link rel='stylesheet' href="{% static 'css/register_login.css' %}">
+  <h1 class="neonText">
+    >BOX OFFICE 
+    <</h1>
+    <h2 class="neonText">Single ticket for many movies</h2> 
+  </h1>
+<body>
+ </div>
+
+<div class = "card2">  
+  <h2 class="p1">Sign up</h2> <br> 
+  <form method="post">  
+    {% csrf_token %}
+      {% for field in form %}  
+      <h2 class="p1  ">
+        {{ field.label_tag }}<br>  
+        <div class="p1" >{{ field }} <br>
+          <small class="p2" >{{ field.help_text }}</small>
+          {% if field.help_text %} <br> 
+        {% endif %}  
+        {% for error in field.errors %}  
+          <p style="color: red">{{ error }}</p>  
+        {% endfor %}
+      
+      </h2>  
+      {% endfor %}
+    <button type="submit" class="noselect blue">Sign up</button>
+  </form>
+  <div> 
+  {% for message in messages %}
+  <div class="card2 text-center ">
+    <h2> {{message}} </h2>
+    </div>
+  {% endfor %}
+  </div><br>
+  <a href="{% url 'home' %}">
+    <div class="noselect blue card2 text-center ">
+      <h2 class="p1 ">Home</h2>
+    </a>
+  <a href="{% url 'login' %}">
+    <div class="noselect blue card2 text-center ">
+      <h2 class="p1 ">Login</h2>
+    </a>
+</div>
+</div>
+{% endblock %}  
