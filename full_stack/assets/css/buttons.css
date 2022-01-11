@@ -1,0 +1,150 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.noselect {
+  -webkit-touch-callout: none;
+    -webkit-user-select: none;
+     -khtml-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+		-webkit-tap-highlight-color: transparent;
+}
+
+button {
+	width: 150px;
+	height: 50px;
+	cursor: pointer;
+	background: #040035;
+	margin: 10px;
+	border: none;
+	border-radius: 10px;
+	box-shadow: -5px -5px 15px rgb(182, 179, 179), 5px 5px 15px rgb(182, 179, 179), inset 5px 5px 10px #444, inset -5px -5px 10px #222;
+	color: rgb(250, 246, 246);
+	font-size: 16px;
+}
+
+button:hover {
+	box-shadow: -5px -5px 15px #444, 5px 5px 15px #222, inset 5px 5px 10px #222, inset -5px -5px 10px #444;
+	font-size: 15px;
+	transition: 500ms;
+}
+
+button:focus {
+	outline: none;
+}
+
+.red:hover {
+	color: #f07171;
+	text-shadow: 0px 0px 10px #f07171;
+}
+
+.green:hover {
+		color: #93f071;
+	text-shadow: 0px 0px 10px #93f071;
+}
+
+.blue:hover {
+	color: #71b7f0;
+	text-shadow: 0px 0px 10px #71b7f0;
+}
+
+.purple:hover {
+	color: #b971f0;
+	text-shadow: 0px 0px 10px #b971f0;
+}
+
+.p1 {
+	font-family: "Brush Script MT", Cursive;
+	color:azure;
+	font-size: 1rem;
+  }
+.p2 {
+	font-family: "Brush Script MT", Cursive;
+	color:rgb(12, 165, 165);
+	font-size: 0.5rem;
+	text-align: center;
+  }
+.card {
+  margin-bottom: auto;
+  box-shadow: 0 4px 8px hsl(0, 17%, 94%);
+  background: #333333;
+  color: #eaf1f0;
+  transition: 0.3s;
+  width: auto;
+  height: auto;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto
+	
+}
+.card2 {
+	margin-bottom: auto;
+	box-shadow: 0 4px 8px hsl(0, 17%, 94%);
+	background: #040035;
+	color: #8f9292;
+	transition: 0.3s;
+	max-width: 500px;
+	min-width: none;
+	height: auto;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto
+}
+
+.card:hover {
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+	background: 0 0 15px #4d4b4c;
+	color: #f5ecec;
+}
+
+.card2:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  background: 0 0 15px #4d4b4c;
+  color: #7e7a7a;
+}
+
+.img-fluid {
+	max-height: 300px;
+	background: 0 0 15px #4d4b4c;
+	color: #ffffff;
+}
+
+.display-card {
+	min-height: 30px;
+	background: 0 0 15px #4d4b4c;
+	color: #868383;
+}
+
+a:link {
+  color: black;
+}
+
+a:visited {
+	color: lightblue;
+}
+
+a:hover {
+	color: darkblue;
+}
+
+a:active {
+	color: black;
+}
+
+h1::-moz-selection {
+	background-color: var(--neon-border-color);
+	color: var(--neon-text-color);
+}
+
+h1::selection {
+	background-color: var(--neon-border-color);
+	color: var(--neon-text-color);
+}
+
+h1:focus {
+	outline: none;
+}

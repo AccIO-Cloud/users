@@ -1,0 +1,45 @@
+{% load static%}
+{% block content %}
+<!DOCTYPE html>
+<html>
+<head>
+  <link href='https://fonts.googleapis.com/css?family=Yellowtail:400' rel='stylesheet' type='text/css'>
+  <link rel='stylesheet' href="{% static 'css/register_login.css' %}">
+  <h1 class="neonText">
+    >LOGIN
+    <</h1>
+    <h2 class="neonText">Please provide details</h2> 
+  </h1>
+<body>
+ </div>
+
+<body>
+    <form action="login" method="post">
+        {% csrf_token %}
+        <div class="card2 text-center ">
+            <h3 class="p1 ">Username<br>
+        <input type="text" name="username" placeholder="username/email"><br></h3>
+        <h3 class="p1 ">Password</h3>
+        <input type="password" name="password" placeholder="password"><br>
+        <input type="Submit">
+        </div>
+    </form>
+    <div>
+        {% for message in messages %}
+        <div class="card2 text-center ">
+        <h2 class="p1"> {{message}} </h2>
+        </div>
+        {% endfor %}
+    </div>
+{% csrf_token %}
+<a href="{% url 'home' %}">
+	<div class="card2 text-center ">
+		<h2 class="p1 ">Home</h2>
+	</a>
+<a href="{% url 'signup' %}">
+	<div class="card2 text-center ">
+		<h2 class="p1 ">Register</h2>
+	</a>
+</body>
+</html>
+{% endblock %}  

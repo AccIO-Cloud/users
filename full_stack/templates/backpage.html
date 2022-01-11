@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+          
+
+<!--Reset Password-->
+<div class="container p-5">
+       <h2 class="font-weight-bold mt-3">Please confirm your email address to complete the registration</h2>
+       
+<a href="{% url 'login' %}">
+	<div class="col-26 text-center card display-card">
+		<br><h2 class="mt-2">Login</h2><br>
+	</a>
+<a href="{% url 'home' %}">
+	<div class="col-26 card text-center ">
+		<br><h2 class="mt-2 ">Home</h2><br>
+	</a>
+{% endblock %}

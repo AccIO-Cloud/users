@@ -1,20 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
 
-<html>
-    <head>
-        <title>{% block title %}{% endblock title %}</title>
-        {% block css %} {% endblock css %}
-    </head>
-    <body>
-        <!-- <h1>Built-In User Registeration / Authentication App</h1> -->
+<head>
+    <style>
+        .form-submit-button {
+            background:blue;
+            color:#fff;
+            border:100pxsolid#eee;
+            border-radius:100px;
+            box-shadow:50px50px50px#eee;
+            text-shadow:none;
+       }
+       .form-submit-button:hover {
+            background:darkblue;
+            color:#fff;
+            border:100pxsolid#eee;
+            border-radius:100px;
+            box-shadow:50px50px50px#eee;
+            text-shadow:none;
+       }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+</head>
 
-        {% block content %} {% endblock content %}
+<body bgcolor="black">
 
-        {% if messages %}
-            {% for message in messages %}
-                <div class="alert {% if message.tags %}alert-{{ message.tags }}{% endif %}" role="alert">{{ message }}</div>
-            {% endfor %}
-        {% endif %}
-        
-        {% block javascript %} {% endblock javascript %}
-    </body>
+    {% block content %}
+
+    {% endblock %}
+
+
+</body>
+
 </html>
