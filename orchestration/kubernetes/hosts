@@ -1,6 +1,0 @@
-[masters]
-master ansible_host= <master-ip> ansible_user=root
-
-[workers]
-worker1 ansible_host= <worker1-ip> ansible_user=root
-worker2 ansible_host= <worker2-ip> ansible_user=root
